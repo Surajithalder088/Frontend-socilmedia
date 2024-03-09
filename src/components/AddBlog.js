@@ -20,7 +20,7 @@ const AddBlog = () => {
   }
   // to sending all data to backend
 const sendRequest =async ()=>{
-  const res=await axios.post("http://localhost:8000/api/blog/add",{
+  const res=await axios.post("https://fulltack-socialmedia.onrender.com/api/blog/add",{
     title:inputs.title,
     description:inputs.description,
     image:inputs.imageURL,

@@ -25,7 +25,7 @@ const BlogDetails = () => {
   }
 
   const fetchDetails=async()=>{
-    const res=await axios.get(`http://localhost:8000/api/blog/${id}`).catch((e)=>console.log(e))
+    const res=await axios.get(`https://fulltack-socialmedia.onrender.com/api/blog/${id}`).catch((e)=>console.log(e))
     const data =await res.data;
     return data;
   }
@@ -40,7 +40,7 @@ const BlogDetails = () => {
   },[id]);
 
   const sendRequest=async ()=>{
-    const rest=await axios.put(`http://localhost:8000/api/blog/update/${id}`,{
+    const rest=await axios.put(`https://fulltack-socialmedia.onrender.com/api/blog/update/${id}`,{
       title:inputs.title,
       description:inputs.description,
     }).catch((e)=>console.log(e));

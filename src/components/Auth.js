@@ -20,7 +20,7 @@ const Auth = () => {
     }))
   }
   const sendRequset=async(type="login")=>{
-   const res=await axios.post(`http://localhost:8000/api/user/${type}`,{
+   const res=await axios.post(`https://fulltack-socialmedia.onrender.com/api/user/${type}`,{
       name:inputs.name,
       email:inputs.email,
       password:inputs.password
