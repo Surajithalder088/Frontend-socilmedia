@@ -12,6 +12,7 @@ const Auth = () => {
     email:"",
     password:""
   })
+  const url="https://fulltack-socialmedia.onrender.com";
   const [isSignup, setIsSignup] = useState(false)
   const handleChange=(e)=>{
     setInputs((prevState)=>({
@@ -20,7 +21,7 @@ const Auth = () => {
     }))
   }
   const sendRequset=async(type="login")=>{
-   const res=await axios.post(`https://fulltack-socialmedia.onrender.com/api/user/${type}`,{
+   const res=await axios.post(`${url}/api/user/${type}`,{
       name:inputs.name,
       email:inputs.email,
       password:inputs.password

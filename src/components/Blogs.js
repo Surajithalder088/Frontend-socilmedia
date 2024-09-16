@@ -1,11 +1,11 @@
 import React, { useEffect,useState } from 'react'
 import axios from "axios"
 import Blog from "./Blog"
-
+const url="https://fulltack-socialmedia.onrender.com";
 const Blogs = () => {
   const [blogs, setBlogs] = useState()
   const sendRequest= async ()=>{
-    const res = await axios.get("https://fulltack-socialmedia.onrender.com/api/blog").catch((err)=>console.log(err));
+    const res = await axios.get(`${url}/api/blog`).catch((err)=>console.log(err));
     const data = await res.data;
     return data;
   }

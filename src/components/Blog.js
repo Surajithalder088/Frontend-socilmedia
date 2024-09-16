@@ -9,9 +9,9 @@ const Blog = ({title,description,imageURL,userName,isUser,id}) => {
   const handleEdit=(e)=>{
     navigate(`/myBlogs/${id}`)
   }
-
+  const url="https://fulltack-socialmedia.onrender.com";
   const deleteRequest=async ()=>{
-    const res =await axios.delete(`https://fulltack-socialmedia.onrender.com/api/blog/${id}`).catch((e)=>console.log(e));
+    const res =await axios.delete(`${url}/api/blog/${id}`).catch((e)=>console.log(e));
     const data= await res.data;
     return data;
   }

@@ -1,11 +1,13 @@
 import React ,{useEffect,useState}from 'react'
 import axios from "axios";
 import Blog from "./Blog";
+
+const url="https://fulltack-socialmedia.onrender.com";
 const UserBlogs = () => {
   const [user, setUser] = useState()
   const id=localStorage.getItem("userId")
   const sendRequest=async (req,res)=>{
-     res =await axios.get(`https://fulltack-socialmedia.onrender.com/api/blog/user/${id}`).catch((err )=>console.log(err))
+     res =await axios.get(`${url}/api/blog/user/${id}`).catch((err )=>console.log(err))
     const data =await res.data;
     return data;
   }

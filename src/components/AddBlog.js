@@ -3,7 +3,7 @@ import {Box, Button, InputLabel, TextField, Typography} from"@mui/material"
 import axios from "axios"
 import { useNavigate } from 'react-router-dom'
 
-
+const url="https://fulltack-socialmedia.onrender.com";
 const labelStyles={mb:1,mt:2,fontSize:'65px',fontWeight:"bold"}
 const AddBlog = () => {
   const navigate=useNavigate()
@@ -20,7 +20,7 @@ const AddBlog = () => {
   }
   // to sending all data to backend
 const sendRequest =async ()=>{
-  const res=await axios.post("https://fulltack-socialmedia.onrender.com/api/blog/add",{
+  const res=await axios.post(`${url}/api/blog/add`,{
     title:inputs.title,
     description:inputs.description,
     image:inputs.imageURL,
